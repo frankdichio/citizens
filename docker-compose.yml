@@ -28,11 +28,12 @@ services:
     container_name: db
     restart: always
     image: mysql:latest
+    platform: linux/x86_64
     ports:
      - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: 'root'
-      MYSQL_USER: 'frank'
+      MYSQL_USER: 'sushant'
       MYSQL_PASS: 'password'
     volumes:
       - ./db-data:/var/lib/mysql
